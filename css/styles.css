@@ -1,0 +1,680 @@
+/* Basis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffde8;
+    color: #000;
+    font-family: "Google Sans", "Inter", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header en Nav */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fffde8;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 74px;
+}
+
+.site-nav {
+    min-height: 74px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 6px 11px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.site-nav a {
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-logo {
+    position: relative;
+    width: 92px;
+    height: 53px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    position: absolute;
+    top: -10px;
+    left: -214px;
+    width: 1008px;
+    max-width: none;
+    height: 74px;
+}
+
+.nav-donate {
+    padding: 6px 8px;
+    border-radius: 4px;
+    background: #da0010;
+    color: #fff;
+}
+
+.nav-donate:hover {
+    background: #b8000d;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero-img {
+    width: 100%;
+    height: 407px;
+    object-fit: cover;
+}
+
+.hero-card {
+    position: relative;
+    width: 708px;
+    max-width: 92%;
+    margin: -62px auto 0;
+    padding: 12px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    border-radius: 6px;
+    background: #cfc8ff;
+    text-align: center;
+}
+
+.hero-card h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.hero-card p {
+    max-width: 656px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.btn-red {
+    padding: 7px;
+    border-radius: 4px;
+    background: #da0010;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.btn-red:hover {
+    background: #b8000d;
+}
+
+/* Belofte */
+.promise {
+    margin-top: 50px;
+    padding: 25px 56px;
+    background: #ffe9cb;
+    text-align: center;
+}
+
+.promise h2 {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.promise ul {
+    margin: 21px auto 0;
+    padding-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 59px;
+    font-size: 28px;
+}
+
+/* Onze huizen */
+.houses {
+    padding: 28px 20px 0;
+    text-align: center;
+}
+
+.houses h2 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.31em;
+}
+
+.house-grid {
+    width: 969px;
+    max-width: 100%;
+    margin: 42px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+}
+
+.house-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #cdc4f5;
+}
+
+.house-card img {
+    height: 242px;
+    object-fit: cover;
+    border-radius: 28px 28px 0 0;
+}
+
+.house-card h3 {
+    padding: 7px 6px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.house-card p {
+    padding: 6px 6px 28px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Donaties */
+.donate-section {
+    padding: 56px 11px 0;
+}
+
+.donate-panel {
+    width: 372px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 28px 17px 25px;
+    border: 2px solid #eabfff;
+    border-radius: 34px;
+    background: #cfc8ff;
+    text-align: center;
+}
+
+.donate-panel h2 {
+    font-size: 29px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #e51922, #e1ab55, #bc46f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.amounts {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11px;
+}
+
+.amount,
+.donate-btn {
+    border: 0;
+    background: #da0010;
+    color: #fff;
+    cursor: pointer;
+}
+
+.amount {
+    height: 67px;
+    padding: 0 3px;
+    border-radius: 13px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.donate-msg {
+    margin-top: 28px;
+    height: 209px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 17px;
+    border-radius: 20px;
+    background: #ffbb15;
+}
+
+.donate-msg p {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.donate-btn {
+    margin-top: 36px;
+    width: 100%;
+    height: 46px;
+    font-size: 31px;
+    font-weight: 700;
+}
+
+/* Verhalen */
+.stories {
+    max-width: 967px;
+    margin: 0 auto;
+    padding: 56px 20px 0;
+}
+
+.stories-head {
+    text-align: center;
+}
+
+.stories-head h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.stories-head p {
+    margin-top: 11px;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.story {
+    margin-top: 24px;
+    padding: 42px 7px;
+    display: flex;
+    align-items: center;
+    gap: 49px;
+}
+
+.story blockquote {
+    flex: 1;
+    font-family: "David Libre", serif;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.story img {
+    width: 374px;
+    height: 363px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.story-reverse img {
+    width: 402px;
+    height: 377px;
+}
+
+/* Footer */
+footer {
+    padding: 56px 25px 22px;
+}
+
+.footer-cols {
+    max-width: 986px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.footer-contact {
+    width: 305px;
+}
+
+.footer-cols nav {
+    width: 220px;
+}
+
+.footer-cols nav:last-child {
+    width: 171px;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+footer address,
+footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+footer nav a {
+    text-decoration: underline;
+}
+
+footer address a {
+    overflow-wrap: anywhere;
+}
+
+footer address strong {
+    font-weight: 700;
+}
+
+footer address .small {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    margin-top: 39px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.legal,
+.socials,
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+.legal {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.socials {
+    gap: 13px;
+}
+
+.socials img {
+    width: 60px;
+    height: 60px;
+}
+
+.partners {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.partners p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logo-mcd,
+.logo-alg {
+    height: 74px;
+    width: auto;
+}
+
+.logo-cbf {
+    height: 62px;
+    width: auto;
+}
+
+.logo-privacy {
+    height: 58px;
+    width: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    main {
+        margin-top: 60px;
+    }
+
+    .site-nav {
+        font-size: 18px;
+        gap: 16px;
+    }
+
+    .hero-img {
+        height: 220px;
+    }
+
+    .hero-card {
+        margin-top: -30px;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .hero-card h1 {
+        font-size: 28px;
+    }
+
+    .hero-card p {
+        font-size: 18px;
+    }
+
+    .btn-red {
+        font-size: 18px;
+    }
+
+    .promise {
+        padding: 30px 20px;
+    }
+
+    .promise h2 {
+        font-size: 40px;
+    }
+
+    .promise ul {
+        font-size: 22px;
+        gap: 30px;
+    }
+
+    .houses h2 {
+        font-size: 36px;
+    }
+
+    .house-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .house-card img {
+        height: 250px;
+    }
+
+    .house-card h3 {
+        font-size: 22px;
+    }
+
+    .house-card p {
+        font-size: 20px;
+    }
+
+    .donate-panel h2 {
+        font-size: 28px;
+    }
+
+    .amount {
+        height: 64px;
+        font-size: 20px;
+    }
+
+    .donate-msg {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .donate-msg p {
+        font-size: 22px;
+    }
+
+    .donate-btn {
+        font-size: 26px;
+    }
+
+    .stories-head h2 {
+        font-size: 40px;
+    }
+
+    .stories-head p {
+        font-size: 22px;
+    }
+
+    .story {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .story blockquote {
+        font-size: 26px;
+    }
+
+    .story img,
+    .story-reverse img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-contact,
+    .footer-cols nav,
+    .footer-cols nav:last-child {
+        width: 100%;
+    }
+
+    footer h2 {
+        font-size: 26px;
+    }
+
+    footer address,
+    footer nav {
+        font-size: 20px;
+    }
+}
+
+/* Contactformulier (vervangt Service en Organisatie in de footer) */
+.contact-form {
+    flex: 1 1 392px;
+    max-width: 574px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-size: 14px;
+}
+
+.contact-form h2 {
+    margin-bottom: 3px;
+}
+
+.contact-form .rij {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 11px;
+}
+
+.contact-form .veld {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.contact-form .verplicht {
+    margin-left: 2px;
+    color: #da0010;
+}
+
+.contact-form .hint {
+    margin-bottom: 6px;
+    font-style: italic;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 11px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    background: transparent;
+    color: #000;
+    font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #757575;
+}
+
+.contact-form select {
+    appearance: none;
+    padding-right: 34px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 11px center;
+    cursor: pointer;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible,
+.contact-form .form-btn:focus-visible {
+    outline: 2px solid #1a56db;
+    outline-offset: 2px;
+}
+
+.contact-form .form-btn {
+    align-self: flex-start;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    background: #da0010;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-form .form-btn:hover {
+    background: #b8000d;
+}
+
+@media (max-width: 900px) {
+    .contact-form {
+        flex-basis: 100%;
+        max-width: none;
+        font-size: 18px;
+    }
+
+    .contact-form .rij {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
