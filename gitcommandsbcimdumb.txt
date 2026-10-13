@@ -1,0 +1,9 @@
+om te committen op gittea en github
+
+git add .
+
+git commit -m "Korte omschrijving van wat je hebt aangepast"
+
+git push origin main
+
+git push gitea main
